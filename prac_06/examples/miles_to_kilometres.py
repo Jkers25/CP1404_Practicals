@@ -1,9 +1,6 @@
 from kivy.app import App
 from kivy.lang import Builder
 
-MILES_TO_KILOMETRES_RATE = 1.621371
-
-
 class miles_to_kilometres(App):
     def build(self):
         self.title = "Miles to Kilometres"
@@ -11,7 +8,7 @@ class miles_to_kilometres(App):
 
     def handle_calculate_miles_to_kilometres(self, miles):
         miles = test(miles)
-        kilometres = miles * MILES_TO_KILOMETRES_RATE
+        kilometres = miles * 1.621371
         self.root.ids.output_label.text = str(kilometres)
         return self.root
 
