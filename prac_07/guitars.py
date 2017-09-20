@@ -1,21 +1,19 @@
 from prac_07.Guitar import Guitar
-
+print('My Guitars')
 guitars = []
-count = -1
 name = input('Name: ')
 while name != '':
-    count += 1
-    # year = input('Year: ')
+    # year = int(input('Year: '))
     # cost = int(input('Cost: '))
-    # temp_guitar = Guitar(name, year, cost)
-    # guitars.append(temp_guitar)
+    # guitars.append(Guitar(name, year, cost))
     guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
     guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.9))
-    print('{self.name} ({self.year}), worth ${self.cost:>,.2f}'.format(self=guitars[count]))
+    print('{self.name} ({self.year}), worth ${self.cost:>,.2f} added.'.format(self=guitars[-1]))
     name = input('Name: ')
 for i,guitar in enumerate(guitars):
-    if guitar.is_vintage() is False:
-        print('Guitar {}: {self.name} ({self.year}), worth ${self.cost:>,.2f}'.format(i, self=guitar))
-    else:
-        print('Guitar {}: {self.name} ({self.year}), worth ${self.cost:>,.2f} (vintage)'.format(i, self=guitar))
+    vintage_string = ""
+    if guitar.is_vintage():
+        vintage_string = "(vintage)"
+
+    print('Guitar {}: {self.name} ({self.year}), worth ${self.cost:>,.2f} {}'.format(i+1,vintage_string, self=guitar,))
 
