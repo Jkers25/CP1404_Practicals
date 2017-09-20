@@ -6,7 +6,7 @@ from prac_07.car import Car
 
 def main():
     """Demo test code to show how to use car class."""
-    my_car = Car(180,Car)
+    my_car = Car(180,'Car')
     my_car.drive(30)
     limo = Car(100,'limo')
     limo.add_fuel(20)
