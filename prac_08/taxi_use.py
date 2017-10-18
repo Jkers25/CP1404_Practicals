@@ -1,10 +1,10 @@
 from prac_08.taxi import Taxi
 from prac_08.silver_taxi import SilverTaxi
 
-taxis = [Taxi("Prius", 100), SilverTaxi("Limo", 100, 2), SilverTaxi("Hummer", 200, 4)]
 
 
 def main():
+    taxis = [Taxi("Prius", 100), SilverTaxi("Limo", 100, 2), SilverTaxi("Hummer", 200, 4)]
     print("Let's Drive")
     user_input = 'a'
     bill = 0.0
